@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Bootstrap Layout</title>
+    <title>Bootstrap Team Layout</title>
 
     <!-- Bootstrap CSS -->
     <link 
@@ -21,7 +21,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="#" onclick="showHome()">
                 <i class="fa-solid fa-layer-group me-2"></i>My Website
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -30,40 +30,56 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showHome()">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showTeam()">Team</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="bg-light py-5">
-        <div class="container text-center">
-            <h1 class="display-4">Welcome</h1>
-            <p class="lead">A simple Bootstrap layout with Font Awesome icons.</p>
-            <a href="#" class="btn btn-primary">
-                <i class="fa-solid fa-circle-info me-2"></i>Learn More
-            </a>
-        </div>
-    </header>
+    <!-- HOME SECTION -->
+    <div id="homeSection">
+        <header class="bg-light py-5">
+            <div class="container text-center">
+                <h1 class="display-4">Welcome</h1>
+                <p class="lead">A simple Bootstrap layout with a dynamic Team section.</p>
+                <a href="#" class="btn btn-primary" onclick="showTeam()">
+                    <i class="fa-solid fa-users me-2"></i>Meet the Team
+                </a>
+            </div>
+        </header>
+    </div>
 
-    <!-- MAIN CONTENT -->
-    <section class="py-5">
+    <!-- TEAM SECTION -->
+    <div id="teamSection" class="py-5" style="display:none;">
         <div class="container">
+            <h2 class="text-center mb-4">
+                <i class="fa-solid fa-people-group me-2"></i>Our Team
+            </h2>
+
             <div class="row g-4">
 
-                <div class="col-md-4">
-                    <div class="p-4 border rounded text-center">
-                        <i class="fa-solid fa-bolt fa-2x mb-3 text-warning"></i>
-                        <h4>Fast</h4>
-                        <p>Bootstrap helps you build responsive layouts quickly.</p>
+                <!-- Team Leader -->
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto mb-3" alt="Leader">
+                        <h5 class="fw-bold">Alex Johnson</h5>
+                        <p class="text-primary fw-semibold">Team Leader</p>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="p-4 border rounded text-center">
-                        <i class="fa-solid fa-mobile-screen-button fa-2x mb-3 text-primary"></i>
-                        <h4>Responsive</h4>
-                        <p>Everything scales beautifully on any device.</p>
+                <!-- Member 2 -->
+                <div class="col-md-3">
+                    <div class="card text-center p-3">
+                        <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto mb-3" alt="Member">
+                        <h5 class="fw-bold">Maria Lopez</h5>
+                        <p>Developer</p>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="col-md-3">
